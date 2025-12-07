@@ -1,0 +1,380 @@
+
+
+
+
+
+li {
+  list-style: none;
+}
+
+
+.main-nav{
+    background-color:#000000; 
+    width: 100%;
+    position: fixed;   
+    height: 10rem;
+    display: grid;
+    z-index: 100;
+    /* align-items: center; */
+    grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+.logo{
+    /* background-color:black; */
+    grid-row: 1/6;
+    display: grid;
+    font-size: large;
+    font-weight: bold;
+    grid-column: 2/3;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+}
+.logo ul{
+    /* height: 10rem; */
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar{
+    /* background-color:black; */
+    grid-column: 3/6;
+    grid-row: 1/6;
+    
+}
+
+
+
+.search-bar ul{
+    height: 10rem;
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+}
+
+
+
+
+.search-bar li .cartprofile {
+  height: 10rem;
+  display: flex;
+   align-items: center; 
+   justify-content: space-evenly;
+}
+
+.profile-cart {
+  /* grid-row: 1/2; */
+  grid-column:4/5;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+
+
+
+
+
+.profile-cart ul {
+  height: 10rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* .profile-cart ul {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+} */
+
+
+/* grid part */
+
+
+.profile-cart ul li {
+  font-size: large;
+}
+
+/* .profile-cart ul li a {
+  text-transform: capitalize;
+  color: rgba(0, 0, 3, 0.8);
+  transition: 0.5s;
+} */
+.profile-cart ul li:hover > a {
+  transform-origin: left;
+  color: rgba(0, 0, 3, 1);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.profile-cart .hamburger-menu{
+    display: none;
+} 
+
+.profile-cart .profile-icon{
+  display: none;
+} 
+
+
+@media (max-width: 1080px) {
+    .main-nav {
+      height: 10rem;
+      grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    }
+  
+   
+    .logo,
+    .search-bar ul,
+    .profile-cart ul {
+      height: 8rem;}
+
+  
+  }
+
+
+  @media (max-width:998px){
+    .main-nav {
+        height: 10rem;
+        grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+      }
+    
+      .search-bar {
+        display: none;
+      }
+
+
+      .profile-cart {
+        display: none;
+      }
+
+
+      .logo{
+        height: 10rem;
+      }
+    
+      
+      .profile-cart ul {
+        display: none;
+
+      }
+
+      .mobile-search-bar {
+        /* grid-column: 2/5; */
+        /* position: fixed;  */
+        z-index: 99; 
+      }
+
+      .mobile-search-bar {
+        grid-row: inherit;
+        background-color:#000000;
+        height:13rem;
+        display: grid;
+        width: 22.5rem;
+        grid-column: 3/6; 
+        align-items: top;
+        align-content: end;
+        /* justify-content: space-between; */
+        /* padding-left: 1rem; */
+        /* max-width:none; */
+        /* transition: all 2s linear; */
+        /* transform-origin: top; */
+        
+      }
+
+
+      .mobile-search-bar ul {
+        /* height: 0rem; */
+        display: grid;
+        position: absolute;
+        justify-content: center;
+        flex-direction: row;
+        /* display: block; */
+        /* align-items: start; */
+      }
+
+
+
+      .mobile-search-bar ul li .cartprofile{
+        /* height: 0rem; */
+        display: grid;
+        
+        justify-content: space-around;
+        
+        /* display: block; */
+        /* align-items: start; */
+      }
+
+
+
+      
+
+
+
+
+
+
+      /* profile-cart css */
+
+
+      .mobile-profile-cart {
+        grid-column: 2/5;
+        position: relative;
+        z-index: 99;
+      }
+    
+      
+    
+      .mobile-profile-cart ul {
+        height: 4rem;
+        display: grid;
+        justify-content: center;
+        flex-direction: row;
+        align-items: start;
+      }
+    
+      
+
+      /*  */
+
+
+      
+
+
+      
+
+
+      
+
+
+      .profile-cart {
+        grid-row: 1/2;
+        grid-column: 4/5;
+        justify-items: end;
+        align-items: center;
+        transition: all 2s linear;
+      }
+    
+      /* .profile-cart .profile-cart-desktop {
+        height: 0;
+        display: none; 
+      } */
+
+
+    
+    
+      
+    
+      .profile-cart {
+        height: 7rem;
+        display: flex;
+        justify-self: end;
+        align-items: center;
+      } 
+
+      .profile-cart .hamburger-menu {
+        display: block;
+        font-size: 2.5rem;
+       
+        
+      }
+      
+      
+      /* .profile-cart .profile-icon{
+        display: block;
+        font-size: 2.5rem;
+        height: 7rem;
+        display: flex;
+        justify-self: end;
+        align-items: center;
+      } */
+
+      .profile-cart .profile-icon{
+        display: block;
+        font-size: 2.5rem;
+      } 
+  }
+
+
+
+  @media (max-width: 798px) {
+    .main-nav {
+      height: 10rem;
+      grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
+    }
+  
+    .logo,
+    .profile-cart ul {
+      height: 10rem;
+    }
+  
+    .profile-cart {
+      height: 3rem;
+      display: flex;
+      justify-self: end;
+      align-items: center;
+    } 
+  
+    .profile-cart .hamburger-menu {
+      display: block;
+      font-size: 2.5rem;
+    } 
+
+    .profile-cart .profile-icon{
+      display: block;
+      font-size: 2.5rem;
+    } 
+  }
+
+
+
+
+  @media (max-width: 520px) {
+    .main-nav {
+      height: 6rem;
+      grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    }
+  
+    .logo,
+    .profile-cart ul {
+      height: 6rem;
+    }
+  
+    .logo h2 {
+      font-size: 2rem;
+    }
+  
+    /* .profile-cart {
+      height: 6rem;
+      display: flex;
+      justify-self: end;
+      align-items: center;
+    } */
+  
+    .profile-cart .hamburger-menu {
+      display: block;
+      font-size: 2.5rem;
+    } 
+
+
+
+    .profile-cart .profile-icon{
+      display: block;
+      font-size: 2.5rem;
+    }
+  
+    
+  }
+
+
+
+
+
